@@ -11,11 +11,12 @@ class ProjectItem extends Component {
   render() {
     // console.log(this.props);
     return (
-      <li className="Project">
-      <strong>  {this.props.project.time}</strong> :{this.props.project.title}  : {this.props.project.category}
-      <a href="#" onClick={this.deleteProject.bind(this, this.props.project.id)}>X</a>
-
-      </li>
+      <tr className="Project">
+      <td> {this.props.project.title} </td>
+      <td> {this.props.project.category} </td>
+      <td> {this.props.project.time} </td>
+      <td> <a href="#" onClick={this.deleteProject.bind(this, this.props.project.id)}>X</a> </td>
+      </tr>
     );
   }
 }

@@ -26,7 +26,7 @@ class AddProject extends Component {
         id: uuid.v4(),
         title: this.refs.title.value,
         category: this.refs.category.value,
-        time: "Submitted At " + Date(this.props.date)
+        time: getDateTime()
       }}, function(){
         this.props.addProject(this.state.newProject);
       })
@@ -41,25 +41,40 @@ class AddProject extends Component {
     });
     return (
       <div>
-        <h3> Add project</h3>
+        <h3> Add Project</h3>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <div>
-            <label> Title </label> <br />
-            <input type='text' ref='title'/>
+            <input type='text' placeholder="Enter title" ref='title'/>
           </div>
           <div>
-            <label> Category </label> <br />
             <select  ref='category'>
               {categoryOptions}
             </select>
           </div>
           <br/>
-          <input type="submit" value="Submit"/>
+          <input id='submit' type="submit" value="Submit"/>
         </form>
 
       </div>
     );
   }
+}
+
+//courtesy of https://stackoverflow.com/questions/7357734/how-do-i-get-the-time-of-day-in-javascript-node-js
+function getDateTime() {
+
+    var date = new Date();
+
+    var year = date.getFullYear();
+
+      var month = date.getMonth() + 1;
+      month = (month < 10 ? "0" : "") + month;
+
+      var day  = date.getDate();
+      day = (day < 10 ? "0" : "") + day;
+
+    return year + ":" + month + ":" + day;
+
 }
 
 export default AddProject;

@@ -47,17 +47,20 @@ class App extends Component {
       {
       id: uuid.v4(),
       title: "Business Website",
-      category: "Web design"
+      category: "Web design",
+      time: "2019:01:16"
     },
     {
       id: uuid.v4(),
       title: "Social App",
-      category: "Mobile Development"
+      category: "Mobile Development",
+      time: "2019:01:15"
     },
     {
       id: uuid.v4(),
       title: "eCommerche Shopping Cart",
-      category: "Web development"
+      category: "Web development",
+      time: "2019:01:14"
     }
   ]});
   }
@@ -95,7 +98,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div id='container' className="App">
         <AddProject addProject={this.handleAddProject.bind(this)}/>
         <Projects test="Hello World"
         projects={this.state.projects}
