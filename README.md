@@ -2,7 +2,8 @@
 #### By Deven Orie and Joe Connolly 
 
 ### Description:
-The Project Manager webapp is a CRUD app for keeping track of a list of projects. The app has delete and add functions to give the user full control over their structured to-do list and takes in user inputs allowing the user to easily change and create new tasks. We developed the app as a frontend-only React.js app.  We also displayed JSON records from an external public API, to get practice with this functionality in React.js. 
+The Project Manager webapp is a CRUD app for keeping track of a list of projects. The app has delete and add functions to give the user full control over their structured to-do list and takes in user inputs allowing the user to easily change and create new tasks. We developed the app as a frontend-only React.js app.  We also displayed JSON records from an external public API, to get practice with this functionality in React.js. Below is a screenshot of the finished product:
+https://drive.google.com/file/d/1q_U8Ib7LlTi56Qt8LmsU1kB0-FcC6q9k/view?usp=sharing 
 
 ### Installation:
 Clone the repository and navigate to its root folder. Install npm tools to compile and run React following the linked tutorials below.  Then you should simply be able to run the below comand and navigate to localhost:3000 in your browser to use the webapp.
