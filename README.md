@@ -1,4 +1,4 @@
-# Pong Line Webapp 
+# Project Manager Webapp 
 #### By Deven Orie and Joe Connolly 
 
 ### Description:
