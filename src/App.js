@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Projects from './Components/Projects';
 import AddProject from './Components/AddProject';
+import Todos from './Components/Todos';
 import './App.css';
 import uuid from 'uuid';
 import $ from 'jquery';
@@ -16,13 +17,28 @@ class App extends Component {
     }
   }
 
+  getJsonData(){
+
+  }
+
   componentWillMount() {
     this.getProjects()
-    this.getTodos();
+    this.getTodos()
+    this.getJsonData();
   }
 
 
   componentDidMount() {
+    this.getJsonData();
+    // fetch('https://jsonplaceholder.typicode.com/users')
+    // .then(res => res.json())
+    // .then(json => {
+    //   this.setState({
+    //     isLoaded: true,
+    //     items: json,
+    //   })
+    // });
+
     this.getTodos();
   }
 
@@ -48,7 +64,7 @@ class App extends Component {
 
   getTodos() {
     $.ajax({
-      url: 'https://jsonplaceholder.typicode.com/todos',
+      url: 'https://jsonplaceholder.typicode.com/users',
       dataType: 'json',
       cache: false,
       success: function(data) {
@@ -84,6 +100,8 @@ class App extends Component {
         <Projects test="Hello World"
         projects={this.state.projects}
         onDelete={this.handleDeleteProject.bind(this)}/>
+        <hr />
+        <Todos todos={this.state.todos}/>
       </div>
     );
   }

@@ -12,10 +12,12 @@ class AddProject extends Component {
   }
   static defaultProps =  {
     categories: ['Web Design', 'Web Development',
-  'Mobile Development']
+  'Mobile Development','Software Engineering', 'Personal', 'Other']
   }
   handleSubmit (e) {
       e.preventDefault();
+
+
     if (this.refs.title.value === '') {
       alert("Title is required");
     }
@@ -23,7 +25,8 @@ class AddProject extends Component {
       this.setState({newProject:{
         id: uuid.v4(),
         title: this.refs.title.value,
-        category: this.refs.category.value
+        category: this.refs.category.value,
+        time: "Submitted At " + Date(this.props.date)
       }}, function(){
         this.props.addProject(this.state.newProject);
       })
