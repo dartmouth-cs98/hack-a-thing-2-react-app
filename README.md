@@ -19,7 +19,7 @@ To build the app we followed the React.js tutorial here: https://www.youtube.com
 I (Joe) had very limited experience with React.js and Deven had no experience with React.js.  We both also had only limited experience with other web development technologies - HTML, CSS, and JavaScript. This project was a good opportunity for us to learn the popular React.js frontend JavaScript framework, as well as further develop our skills in web development.
 
 ### Relation to Possible Project Ideas:
-The majority of project ideas that looked promising to us require web applicaitons as key components. Hence gaining experience in React.js, possibly the most popular front end JavaScript framework, could prove very useful for us when we implement are COSC 98 project. 
+The majority of project ideas that looked promising to us require web applications as key components. Hence gaining experience in React.js, possibly the most popular front end JavaScript framework, could prove very useful for us when we implement our COSC 98 project. 
 
 ### What didn't work:
 Deven had trouble formatting the website the way he wanted. He struggled with this for quite some time because it was hard to find how the buttons and labels were bounded together in React and it was difficult to flexibly move these items around. 
